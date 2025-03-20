@@ -1,0 +1,8 @@
+flask  
+flask-cors  
+requests  
+cryptography  
+p2pnetwork  
+ipfshttpclient  
+jsonschema  
+loguru  

@@ -1,0 +1,29 @@
+{
+  "name": "chronofyx",
+  "version": "1.0.0",
+  "description": "A decentralized, blockchain-powered synchronization system with DAO governance",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "contracts:compile": "hardhat compile",
+    "contracts:deploy": "hardhat run scripts/deploy.js",
+    "contracts:test": "hardhat test",
+    "backend:setup": "cd backend && pip install -e .",
+    "backend:start": "cd backend && python -m chronofyx",
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces",
+    "clean": "rm -rf node_modules **/node_modules build dist .cache"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.20.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+} 
