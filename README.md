@@ -2,96 +2,117 @@
 
 A decentralized, blockchain-powered synchronization system with DAO governance.
 
+## What is ChronoFyx?
+
+ChronoFyx is like a digital timekeeper that helps different systems and people work together smoothly. Think of it as a smart clock that:
+
+- ⏰ Keeps everything in sync across different platforms and devices
+- 🤝 Lets people make decisions together through voting
+- 🔒 Keeps everything secure using blockchain technology
+- 📱 Works on any device, anywhere
+
+For example, if you're working on a project with multiple people:
+- Everyone can see the same information at the same time
+- Changes are tracked and can't be tampered with
+- The group can vote on important decisions
+- Everything stays organized and up-to-date
+
+## Features
+
+- 🔒 Secure wallet integration with MetaMask and other Web3 wallets
+- 🌐 Multi-chain support (Ethereum Mainnet and Sepolia Testnet)
+- 📊 Real-time transaction monitoring
+- 🏛️ DAO governance system
+- 📱 Modern, responsive UI with Tailwind CSS
+- 🔄 Real-time blockchain data synchronization
+
+## Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- MetaMask or another Web3 wallet
+- WalletConnect project ID (get it from [cloud.walletconnect.com](https://cloud.walletconnect.com/))
+
+## Environment Variables
+
+Create a `.env` file in the `frontend` directory with the following variables:
+
+```env
+# Required for WalletConnect v2
+VITE_WALLET_CONNECT_PROJECT_ID=your-walletconnect-project-id
+
+# Blockchain Network
+VITE_NETWORK_ID=1
+VITE_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/your-api-key
+VITE_CHAIN_ID=1
+
+# Contract Addresses
+VITE_DAO_GOVERNANCE_ADDRESS=0x0000000000000000000000000000000000000000
+
+# API Keys
+VITE_ALCHEMY_API_KEY=your-alchemy-api-key
+VITE_INFURA_API_KEY=your-infura-api-key
+
+# Optional Features
+VITE_ENABLE_TESTNETS=true
+```
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/ChronoFyx.git
+cd ChronoFyx
+```
+
+2. Install dependencies:
+```bash
+cd frontend
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
 ## Project Structure
 
 ```
 ChronoFyx/
-├── contracts/               # Smart contracts
-│   └── DAOGovernance.sol
-├── frontend/               # React frontend application
+├── frontend/
 │   ├── src/
-│   ├── public/
+│   │   ├── pages/
+│   │   │   ├── Home.tsx
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Transactions.tsx
+│   │   │   └── Settings.tsx
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── .env
 │   └── package.json
-├── backend/                # Python backend service
-│   ├── chronofyx/         # Python package
-│   ├── tests/
-│   ├── setup.py
-│   └── requirements.txt
-├── scripts/                # Deployment and utility scripts
-│   ├── deploy.js          # Contract deployment
-│   └── utils/             # Utility scripts
-├── test/                   # Smart contract tests
-├── docs/                   # Documentation
-├── hardhat.config.js      # Hardhat configuration
-└── package.json           # Root package.json
+└── README.md
 ```
 
-## Technology Stack
+## Available Scripts
 
-- **Frontend:**
-  - React with Vite
-  - wagmi v2 for Web3 integration
-  - TailwindCSS for styling
-  - RainbowKit for wallet connection
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint
 
-- **Smart Contracts:**
-  - Solidity ^0.8.20
-  - Hardhat for development and testing
-  - OpenZeppelin contracts
+## Technologies Used
 
-- **Backend Service:**
-  - Python ≥3.7
-  - Flask for API
-  - IPFS for decentralized storage
-
-## Setup Instructions
-
-### Prerequisites
-- Node.js ≥18
-- Python ≥3.7
-- Git
-
-### Smart Contracts & Frontend
-1. Install dependencies:
-   ```bash
-   npm install
-   cd frontend && npm install
-   ```
-
-2. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
-
-3. Deploy contracts:
-   ```bash
-   npx hardhat run scripts/deploy.js --network <network>
-   ```
-
-4. Start frontend development server:
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-
-### Backend Service
-1. Create and activate virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-2. Install dependencies:
-   ```bash
-   cd backend
-   pip install -e .
-   ```
-
-3. Start the backend service:
-   ```bash
-   python -m chronofyx
-   ```
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- wagmi
+- RainbowKit
+- React Router
+- @tanstack/react-query
 
 ## Contributing
 
@@ -105,7 +126,6 @@ ChronoFyx/
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
----
+## Support
 
-Feel free to contribute and enhance ChronoFyx! 🚀
-
+For support, please open an issue in the GitHub repository or contact the maintainers. 
