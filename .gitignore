@@ -1,22 +1,22 @@
 # Dependencies
-node_modules/
-.pnp/
+node_modules
+.pnp
 .pnp.js
 
 # Testing
-coverage/
+coverage
 
 # Production
-build/
-dist/
+build
+dist
+out
 
-# Misc
-.DS_Store
+# Environment files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env
 
 # Logs
 npm-debug.log*
@@ -24,15 +24,20 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
-.idea/
-.vscode/
+.idea
+.vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Temporary files
-*.log
-*.tmp
-*.temp 
+# Hardhat files
+cache
+artifacts
+typechain
+typechain-types
+
+# Misc
+.DS_Store
+*.pem 

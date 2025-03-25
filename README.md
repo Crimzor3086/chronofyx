@@ -1,92 +1,111 @@
 # ChronoFyx
 
-A decentralized time synchronization and governance platform built with Web3 technologies.
-
-## Features
-
-- **Decentralized Governance**: Community-driven decision making
-- **Secure Synchronization**: Reliable time synchronization across the network
-- **Modern UI Components**: Reusable React components with Tailwind CSS
-- **Web3 Integration**: Seamless blockchain interaction with Wagmi and RainbowKit
-- **Toast Notifications**: User-friendly notification system
-- **Form Validation**: Robust form handling with react-hook-form and zod
-- **Error Handling**: Comprehensive error boundary implementation
-- **Type Safety**: TypeScript support throughout the application
-
-## Tech Stack
-
-- React
-- TypeScript
-- Tailwind CSS
-- Vite
-- Wagmi
-- RainbowKit
-- React Query
-- React Hook Form
-- Zod
-- Zustand
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/ChronoFyx.git
-cd ChronoFyx
-```
-
-2. Install dependencies:
-```bash
-cd frontend
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:3000`
+A decentralized, blockchain-powered synchronization system with DAO governance.
 
 ## Project Structure
 
 ```
-frontend/
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── hooks/         # Custom React hooks
-│   ├── pages/         # Application pages
-│   ├── utils/         # Utility functions
-│   ├── services/      # API services
-│   └── constants/     # Constants and configurations
-├── public/           # Static assets
-└── ...config files
+ChronoFyx/
+├── contracts/               # Smart contracts
+│   └── DAOGovernance.sol
+├── frontend/               # React frontend application
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── backend/                # Python backend service
+│   ├── chronofyx/         # Python package
+│   ├── tests/
+│   ├── setup.py
+│   └── requirements.txt
+├── scripts/                # Deployment and utility scripts
+│   ├── deploy.js          # Contract deployment
+│   └── utils/             # Utility scripts
+├── test/                   # Smart contract tests
+├── docs/                   # Documentation
+├── hardhat.config.js      # Hardhat configuration
+└── package.json           # Root package.json
 ```
 
-## Available Scripts
+## Technology Stack
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Check code style
-- `npm run lint:fix` - Fix code style issues
-- `npm run format` - Format code with Prettier
-- `npm run test` - Run tests
+- **Frontend:**
+  - React with Vite
+  - wagmi v2 for Web3 integration
+  - TailwindCSS for styling
+  - RainbowKit for wallet connection
+
+- **Smart Contracts:**
+  - Solidity ^0.8.20
+  - Hardhat for development and testing
+  - OpenZeppelin contracts
+
+- **Backend Service:**
+  - Python ≥3.7
+  - Flask for API
+  - IPFS for decentralized storage
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js ≥18
+- Python ≥3.7
+- Git
+
+### Smart Contracts & Frontend
+1. Install dependencies:
+   ```bash
+   npm install
+   cd frontend && npm install
+   ```
+
+2. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
+
+3. Deploy contracts:
+   ```bash
+   npx hardhat run scripts/deploy.js --network <network>
+   ```
+
+4. Start frontend development server:
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+### Backend Service
+1. Create and activate virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+2. Install dependencies:
+   ```bash
+   cd backend
+   pip install -e .
+   ```
+
+3. Start the backend service:
+   ```bash
+   python -m chronofyx
+   ```
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+Feel free to contribute and enhance ChronoFyx! 🚀
+
