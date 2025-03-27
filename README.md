@@ -61,7 +61,7 @@ VITE_ENABLE_TESTNETS=true
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ChronoFyx.git
+git clone https://github.com/Crimzor3086/ChronoFyx.git
 cd ChronoFyx
 ```
 
